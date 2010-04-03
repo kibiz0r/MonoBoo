@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooBinding", "BooBinding\BooBinding.csproj", "{326850D2-5C9B-4A38-B873-526DE0056C1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple", "Simple\Simple.csproj", "{B2348324-A522-4227-B717-EE9D42CDBD03}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,12 +13,8 @@ Global
 		{326850D2-5C9B-4A38-B873-526DE0056C1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{326850D2-5C9B-4A38-B873-526DE0056C1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{326850D2-5C9B-4A38-B873-526DE0056C1F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B2348324-A522-4227-B717-EE9D42CDBD03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B2348324-A522-4227-B717-EE9D42CDBD03}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B2348324-A522-4227-B717-EE9D42CDBD03}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B2348324-A522-4227-B717-EE9D42CDBD03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Simple\Simple.csproj
+		StartupItem = BooBinding\BooBinding.csproj
 	EndGlobalSection
 EndGlobal
