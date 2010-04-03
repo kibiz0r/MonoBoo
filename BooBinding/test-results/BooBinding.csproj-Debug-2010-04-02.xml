@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <UnitTestResult>
+      <TestDate>2010-04-02T21:48:52</TestDate>
+      <Status>Failure</Status>
+      <TotalFailures>0</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>0</TotalIgnored>
+      <Time />
+      <Message>Could not load file or assembly 'MonoBoo, Version=1.0.3744.39244, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.</Message>
+      <StackTrace>  at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke (System.Runtime.Remoting.Proxies.RealProxy rp, IMessage msg, System.Exception&amp; exc, System.Object[]&amp; out_args) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2010-04-02T21:53:13</TestDate>
+      <Status>Failure</Status>
+      <TotalFailures>0</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>0</TotalIgnored>
+      <Time />
+      <Message>Could not load file or assembly 'BooBinding, Version=1.0.3744.39381, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.</Message>
+      <StackTrace>  at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke (System.Runtime.Remoting.Proxies.RealProxy rp, IMessage msg, System.Exception&amp; exc, System.Object[]&amp; out_args) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2010-04-02T22:02:48</TestDate>
+      <Status>Failure</Status>
+      <TotalFailures>0</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>0</TotalIgnored>
+      <Time />
+      <Message>Could not load file or assembly 'BooBinding, Version=1.0.3744.39471, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.</Message>
+      <StackTrace>  at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke (System.Runtime.Remoting.Proxies.RealProxy rp, IMessage msg, System.Exception&amp; exc, System.Object[]&amp; out_args) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2010-04-02T22:03:52</TestDate>
+      <Status>Failure</Status>
+      <TotalFailures>0</TotalFailures>
+      <TotalSuccess>0</TotalSuccess>
+      <TotalIgnored>0</TotalIgnored>
+      <Time />
+      <Message>Could not load file or assembly 'BooBinding, Version=1.0.3744.39714, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.</Message>
+      <StackTrace>  at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke (System.Runtime.Remoting.Proxies.RealProxy rp, IMessage msg, System.Exception&amp; exc, System.Object[]&amp; out_args) [0x00000] in &lt;filename unknown&gt;:0 </StackTrace>
+    </UnitTestResult>
+  </Results>
+  <Tests />
+</TestRecord>

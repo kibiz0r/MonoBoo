@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Addin id="BooBinding" namespace="MonoDevelop" name="A Boo Language Binding" author="Michael Harrington" copyright="zlib" url="http://github.com/kibiz0r/MonoBoo" description="A Boo Language Binding" category="Language bindings" version="2.2">
+    <Dependencies>
+        <Addin id="Core" version="2.2" />
+        <Addin id="Core.Gui" version="2.2" />
+        <Addin id="Projects" version="2.2" />
+        <Addin id="Projects.Gui" version="2.2" />
+        <Addin id="Ide" version="2.2" />
+        <Assembly name="Boo.Lang.Compiler, Version=1.0.0.0" package="Boo" />
+    </Dependencies>
+    <Runtime>
+        <Import assembly="BooBinding.dll" />
+    </Runtime>
+    <!--<Extension path="/MonoDevelop/ProjectModel/MSBuildItemTypes">
+        <DotNetProject language="Boo" extension="booproj" guid="{B3672514-7503-4B01-B4B4-B44E87061EA2}"/>
+    </Extension>-->
+    <!--<Extension path="/MonoDevelop/Ide/FileFilters">
+        <FileFilter id="Boo"
+                    insertbefore="AllFiles"
+                    _label="Boo Files"
+                    extensions="*.boo"/>
+    </Extension>-->
+    <Extension path="/MonoDevelop/Ide/FileTemplates">
+        <FileTemplate id="EmptyBooFile" resource="EmptyBooFile.xft.xml" />
+        <FileTemplate id="BooGtkSharpWindow" resource="BooGtkSharpWindow.xft.xml" />
+    </Extension>
+    <Extension path="/MonoDevelop/Ide/ProjectTemplates">
+        <ProjectTemplate id="ConsoleProject" resource="ConsoleProject.xpt.xml" />
+        <ProjectTemplate id="EmptyProject" resource="EmptyProject.xpt.xml" />
+        <ProjectTemplate id="LibraryProject" resource="LibraryProject.xpt.xml" />
+    </Extension>
+    <Extension path="/MonoDevelop/ProjectModel/LanguageBindings">
+        <LanguageBinding id="Boo" supportedextensions=".boo" class="BooBinding.BooLanguageBinding" />
+    </Extension>
+</Addin>

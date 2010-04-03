@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Template originator="Michael Harrington" created="04/02/2010" lastModified="04/02/2010">
+    <TemplateConfiguration>
+        <_Name>Console Project</_Name>
+        <_Category>Boo</_Category>
+        <Icon>md-project-console|res:boo-icon-32.png</Icon>
+        <LanguageName>Boo</LanguageName>
+        <_Description>Creates a new Boo console project.</_Description>
+    </TemplateConfiguration>
+    <Actions>
+        <Open filename="Main.boo" />
+    </Actions>
+    <Combine name="${ProjectName}" directory=".">
+        <Options>
+            <StartupProject>${ProjectName}</StartupProject>
+        </Options>
+        <Project name="${ProjectName}" directory=".">
+            <Options />
+            <Files>
+                <FileTemplateReference TemplateID="EmptyClass" name="Main.boo" />
+            </Files>
+        </Project>
+    </Combine>
+</Template>
