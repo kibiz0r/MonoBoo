@@ -14,6 +14,17 @@ namespace BooBinding
 {
     public class BooLanguageBinding : IDotNetLanguageBinding
     {
+        public BooLanguageBinding() : this(new ProcessStarter())
+        {
+        }
+
+        public BooLanguageBinding(IProcessStarter processStarter)
+        {
+            this.processStarter = processStarter;
+        }
+
+        private IProcessStarter processStarter;
+
         public ConfigurationParameters CreateCompilationParameters(System.Xml.XmlElement projectOptions)
         {
             return new BooCompilerParameters();
@@ -30,7 +41,7 @@ namespace BooBinding
             {
                 var outWriter = new StringWriter();
                 var arguments = String.Join(" ", items.GetAll<ProjectFile>().Select(pf => pf.FilePath.ToString()).ToArray());
-                using (var processWrapper = MonoDevelop.Core.Runtime.ProcessService.StartProcess("booc", arguments, configuration.OutputDirectory.ToString(), outWriter, monitor.Log, null))
+                using (var processWrapper = processStarter.StartProcess("booc", arguments, configuration.OutputDirectory.ToString(), outWriter, monitor.Log))
                 {
                     using (var aggregatedOperationMonitor = new AggregatedOperationMonitor(monitor, processWrapper))
                     {
@@ -40,7 +51,7 @@ namespace BooBinding
                             monitor.Log.WriteLine("Build canceled");
                             monitor.ReportError("Build canceled", null);
                         }
-                        monitor.EndTask(); // Do we need this?
+                        monitor.EndTask(); // TODO: Do we need this?
                         var output = outWriter.ToString();
                         var compilerResults = new CompilerResults(new TempFileCollection());
                         using (var stringReader = new StringReader(output))

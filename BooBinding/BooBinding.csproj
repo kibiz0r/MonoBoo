@@ -86,6 +86,8 @@
     <Compile Include="Parser\ExpressionFinder.cs" />
     <Compile Include="BooLanguageBinding.cs" />
     <Compile Include="Test\BooLanguageBindingTest.cs" />
+    <Compile Include="IProcessStarter.cs" />
+    <Compile Include="ProcessStarter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
