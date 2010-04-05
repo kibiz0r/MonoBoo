@@ -56,13 +56,8 @@ namespace BooBinding
                         var compilerResults = new CompilerResults(new TempFileCollection());
                         using (var stringReader = new StringReader(output))
                         {
-                            while (true)
+                            for (var line = stringReader.ReadLine(); line != null; line = stringReader.ReadLine())
                             {
-                                var line = stringReader.ReadLine();
-                                if (line == null)
-                                {
-                                    break;
-                                }
                                 var error = ParseOutputLine(line);
                                 if (error != null)
                                 {
@@ -81,18 +76,19 @@ namespace BooBinding
             return null;
         }
 
-        private CompilerError ParseOutputLine(string line)
+        public CompilerError ParseOutputLine(string line)
         {
-            var regex = new Regex(@"(?<file>.*\.boo)\s*\((?<line>\d+),\s?(?<column>\d+)\):\s*(?<message>.*)");
+            var regex = new Regex(@"(?<file>.*)\((?<line>\d+),(?<column>\d+)\): (?<error>.*?): (?<warning>WARNING: )?(?<message>.*)");
             var match = regex.Match(line);
             if (match.Success)
             {
                 var error = new CompilerError();
+                error.Column = int.Parse(match.Groups["column"].Value);
+                error.ErrorNumber = match.Groups["error"].Value;
+                error.ErrorText = match.Groups["message"].Value;
                 error.FileName = match.Groups["file"].Value;
                 error.Line = int.Parse(match.Groups["line"].Value);
-                error.Column = int.Parse(match.Groups["column"].Value);
-                error.ErrorText = match.Groups["message"].Value;
-                if (error.ErrorText.Contains("WARNING"))
+                if (match.Groups["warning"].Success)
                 {
                     error.IsWarning = true;
                 }
